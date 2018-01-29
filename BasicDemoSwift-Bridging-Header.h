@@ -11,6 +11,5 @@
 
 #import "ObjectiveBridge.h"
 
-#import <UbuduIndoorLocation/UbuduIndoorLocation.h>
 
 #endif
