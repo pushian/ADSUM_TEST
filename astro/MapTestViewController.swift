@@ -16,6 +16,8 @@ class MapTestViewController: UIViewController {
         
         
         // Set up adSumMapViewController
+//        debugPrint("the version is \(ADSumMapViewController.sha)")
+
         self.adSumMapViewController = ADSumMapViewController(frame:CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
         self.adSumMapViewController.delegate = self
         self.adSumMapViewController.view.backgroundColor = .white
@@ -32,13 +34,6 @@ class MapTestViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    
-    @objc func otherHandler() {
-        if let vc = self.parentVC {
-            self.navigationController?.popToViewController(vc, animated: true)
-        }
     }
     
     @objc func Modehandler() {
