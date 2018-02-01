@@ -7,10 +7,16 @@ marker.png (the image used to display the start point (usually the user position
 - add 
 
 override func viewWillDisappear(_ animated: Bool) {
+
     //deinit
     self.adSumMapViewController = nil
+    
         
 } 
 
 
 - App will not crash.
+
+
+CREDITS to PUSHIAN 
+https://github.com/pushian
