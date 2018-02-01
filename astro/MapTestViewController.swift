@@ -8,7 +8,7 @@ class MapTestViewController: UIViewController {
     
     var adSumMapViewController: ADSumMapViewController!
 
-    override func viewDidLoad() {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         let btm = UIBarButtonItem.init(title: "2D Mode", style: .plain, target: self, action: #selector(Modehandler))
@@ -19,16 +19,18 @@ class MapTestViewController: UIViewController {
 //        debugPrint("the version is \(ADSumMapViewController.sha)")
 
         self.adSumMapViewController = ADSumMapViewController(frame:CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
+        self.adSumMapViewController.forceUpdate(withExData: true);
         self.adSumMapViewController.delegate = self
         self.adSumMapViewController.view.backgroundColor = .white
         //        self.adSumMapViewController.set
         self.view.backgroundColor = .white
         self.view.addSubview(self.adSumMapViewController.view)
         
-        
-        self.adSumMapViewController.update()
-        
-        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        //deinit adSumMapViewController
+        self.adSumMapViewController = nil
     }
     
     override func didReceiveMemoryWarning() {
