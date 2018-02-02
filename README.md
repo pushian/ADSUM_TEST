@@ -1,3 +1,13 @@
+ # How to reproduce the crash
+ -- run "pod install"
+ -- open the workspace and run the project
+ +- Run "pod install"
+ +- Open the astro.xcworkspace and run the project
+  - Click the "Load Map" button
+  - Wait until the map is fully loaded
+  - Click the "back" button at the top left corner
+
+
 # How to fix the crash
 
 - In Build Phases - Copy Bundle Resources drag and drop :
@@ -15,8 +25,3 @@ override func viewWillDisappear(_ animated: Bool) {
     
         
 } 
-
-
-
-CREDITS to PUSHIAN 
-https://github.com/pushian
