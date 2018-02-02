@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		851E4A9A202414B800C1AFAC /* marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 851E4A98202414B700C1AFAC /* marker.png */; };
+		851E4A9B202414B800C1AFAC /* path.png in Resources */ = {isa = PBXBuildFile; fileRef = 851E4A99202414B800C1AFAC /* path.png */; };
 		856C9F4A201F790200645E14 /* MapTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856C9F49201F790200645E14 /* MapTestViewController.swift */; };
 		856C9F4C201F7B6D00645E14 /* MapTestHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856C9F4B201F7B6D00645E14 /* MapTestHomeViewController.swift */; };
 		85872C871FD13979008397B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85872C861FD13969008397B1 /* Foundation.framework */; };
@@ -34,6 +36,8 @@
 
 /* Begin PBXFileReference section */
 		3B7561EC8067D960F2A7E024 /* Pods_astro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_astro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		851E4A98202414B700C1AFAC /* marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marker.png; sourceTree = "<group>"; };
+		851E4A99202414B800C1AFAC /* path.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = path.png; sourceTree = "<group>"; };
 		856C9F49201F790200645E14 /* MapTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTestViewController.swift; sourceTree = "<group>"; };
 		856C9F4B201F7B6D00645E14 /* MapTestHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTestHomeViewController.swift; sourceTree = "<group>"; };
 		85872C841FD13952008397B1 /* AdsumIOSAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdsumIOSAPI.framework; sourceTree = "<group>"; };
@@ -98,6 +102,8 @@
 		97232C081FD002C100872991 = {
 			isa = PBXGroup;
 			children = (
+				851E4A98202414B700C1AFAC /* marker.png */,
+				851E4A99202414B800C1AFAC /* path.png */,
 				85872CA91FD1443B008397B1 /* BasicDemoSwift-Bridging-Header.h */,
 				85872C961FD1409F008397B1 /* AdsumCaCert.pem */,
 				85872C971FD1409F008397B1 /* AdsumConfig.xml */,
@@ -231,6 +237,8 @@
 				97232C1A1FD002C200872991 /* Main.storyboard in Resources */,
 				85872C9D1FD140A0008397B1 /* AdsumCaCert.pem in Resources */,
 				85872C9E1FD140A0008397B1 /* AdsumConfig.xml in Resources */,
+				851E4A9A202414B800C1AFAC /* marker.png in Resources */,
+				851E4A9B202414B800C1AFAC /* path.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
