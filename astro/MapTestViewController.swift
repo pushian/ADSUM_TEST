@@ -8,7 +8,7 @@ class MapTestViewController: UIViewController {
     
     var adSumMapViewController: ADSumMapViewController!
 
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         let btm = UIBarButtonItem.init(title: "2D Mode", style: .plain, target: self, action: #selector(Modehandler))
