@@ -11,7 +11,7 @@ class MapTestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let btm = UIBarButtonItem.init(title: "2D Mode", style: .plain, target: self, action: #selector(Modehandler))
+        let btm = UIBarButtonItem.init(title: "Get Logos", style: .plain, target: self, action: #selector(getLogo))
         self.navigationItem.rightBarButtonItem = btm
         
         
@@ -58,10 +58,61 @@ class MapTestViewController: UIViewController {
         }
     }
     
-    //MAKR: - setConstraints
     
-    //MAKR: - General
+    func reloadIcons() {
+        
+        for each in self.adSumMapViewController.getPOIs() {
+            if let id = each as? Int {
+                var path = ""
+                
+                if let resourcePath = Bundle.main.resourcePath {
+                    let imgName = "Orange-Pin.png"
+                    path = resourcePath + "/" + imgName
+                }
+                let logo = ADSLogo(pathToImage: path)
+                //                    logo.setsca
+                logo?.setSize(70, height: 140)
+                logo?.setAlwaysOnTop(true)
+                
+                //                    if id == selectedRoom?.getPOIID() {
+                //                        logo?.setSize(100, height: 200)
+                //
+                //                    } else {
+                //                        logo?.setSize(70, height: 140)
+                //                    }
+                logo?.setAutoScale(true)
+                logo?.setKeepAspectRatio(true)
+                //                logo?.setAutoScale(true)
+                //                logo.set
+                self.adSumMapViewController.add(logo, toPoi: id)
+            }
+        }
+    }
     
+    @objc func getLogo() {
+        var message = ""
+        for each in self.adSumMapViewController.getPOIs() {
+            if let id = each as? Int {
+                let logos = self.adSumMapViewController.getADSLogo(fromPoi: id)
+                if let logos = logos {
+                    if logos.isEmpty {
+                        message += "logo for POI \(id) is EMPTY\n"
+                        debugPrint("logo for POI \(id) is EMPTY")
+                    } else {
+                        debugPrint( "POI \(id)" )
+                        debugPrint(logos)
+                    }
+                } else {
+                    message += "logo for POI \(id) is NULL\n"
+                    debugPrint("logo for POI \(id) is NULL")
+                }
+            }
+        }
+        let alert = UIAlertController(title: "ERROR", message: message, preferredStyle: UIAlertControllerStyle.alert)
+        let yesButton = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alert.addAction(yesButton)
+        self.present(alert, animated: true, completion: nil)
+    }
 }
 
 //MAKR: - ADSumMap
@@ -104,6 +155,7 @@ extension MapTestViewController: ADSumMapViewControllerDelegate {
         self.adSumMapViewController.setCameraMode(ObjectiveBridge().get_CameraMode_FULL());
         //        self.adSumMapViewController.setCameraMode(ObjectiveBridge().get_CameraMode_ORTHO());
         self.adSumMapViewController.setCurrentFloor(2);
+        reloadIcons()
     }
 }
 

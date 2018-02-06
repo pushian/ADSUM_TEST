@@ -26,6 +26,7 @@
 		85872CAD1FD145D2008397B1 /* libz.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 85872CAC1FD145D2008397B1 /* libz.1.tbd */; };
 		85872CAF1FD145DD008397B1 /* libc++.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 85872CAE1FD145DD008397B1 /* libc++.1.tbd */; };
 		85872CB21FD1475D008397B1 /* ObjectiveBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 85872CB01FD1475D008397B1 /* ObjectiveBridge.m */; };
+		85B4878C202984DA001285C4 /* Orange-Pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 85B4878B202984DA001285C4 /* Orange-Pin.png */; };
 		970C143E201DBE150006DE57 /* login.gif in Resources */ = {isa = PBXBuildFile; fileRef = 970C143D201DBE150006DE57 /* login.gif */; };
 		97232C151FD002C200872991 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97232C141FD002C200872991 /* AppDelegate.swift */; };
 		97232C1A1FD002C200872991 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97232C181FD002C200872991 /* Main.storyboard */; };
@@ -57,6 +58,7 @@
 		85872CAE1FD145DD008397B1 /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
 		85872CB01FD1475D008397B1 /* ObjectiveBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectiveBridge.m; sourceTree = "<group>"; };
 		85872CB11FD1475D008397B1 /* ObjectiveBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectiveBridge.h; sourceTree = "<group>"; };
+		85B4878B202984DA001285C4 /* Orange-Pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Orange-Pin.png"; sourceTree = "<group>"; };
 		970C143D201DBE150006DE57 /* login.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = login.gif; sourceTree = "<group>"; };
 		97232C111FD002C200872991 /* astro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = astro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97232C141FD002C200872991 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 		97232C081FD002C100872991 = {
 			isa = PBXGroup;
 			children = (
+				85B4878B202984DA001285C4 /* Orange-Pin.png */,
 				851E4A98202414B700C1AFAC /* marker.png */,
 				851E4A99202414B800C1AFAC /* path.png */,
 				85872CA91FD1443B008397B1 /* BasicDemoSwift-Bridging-Header.h */,
@@ -239,6 +242,7 @@
 				85872C9E1FD140A0008397B1 /* AdsumConfig.xml in Resources */,
 				851E4A9A202414B800C1AFAC /* marker.png in Resources */,
 				851E4A9B202414B800C1AFAC /* path.png in Resources */,
+				85B4878C202984DA001285C4 /* Orange-Pin.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
