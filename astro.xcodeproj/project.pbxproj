@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33847303202DAEC40025195B /* AdsumIOSAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33847301202DAEC30025195B /* AdsumIOSAPI.framework */; };
+		33847304202DAEC40025195B /* AdsumIOSAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 33847301202DAEC30025195B /* AdsumIOSAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		33847306202DAF200025195B /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 85872C941FD1409E008397B1 /* libz.1.dylib */; };
+		33847307202DAF200025195B /* libc++.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 85872C991FD1409F008397B1 /* libc++.1.dylib */; };
 		851E4A9A202414B800C1AFAC /* marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 851E4A98202414B700C1AFAC /* marker.png */; };
 		851E4A9B202414B800C1AFAC /* path.png in Resources */ = {isa = PBXBuildFile; fileRef = 851E4A99202414B800C1AFAC /* path.png */; };
 		856C9F4A201F790200645E14 /* MapTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856C9F49201F790200645E14 /* MapTestViewController.swift */; };
@@ -17,14 +21,9 @@
 		85872C8D1FD139AA008397B1 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85872C8C1FD139A7008397B1 /* MobileCoreServices.framework */; };
 		85872C8F1FD139B8008397B1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85872C8E1FD139B5008397B1 /* UIKit.framework */; };
 		85872C911FD139C6008397B1 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85872C901FD139C3008397B1 /* ImageIO.framework */; };
-		85872C9B1FD140A0008397B1 /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 85872C941FD1409E008397B1 /* libz.1.dylib */; };
 		85872C9D1FD140A0008397B1 /* AdsumCaCert.pem in Resources */ = {isa = PBXBuildFile; fileRef = 85872C961FD1409F008397B1 /* AdsumCaCert.pem */; };
 		85872C9E1FD140A0008397B1 /* AdsumConfig.xml in Resources */ = {isa = PBXBuildFile; fileRef = 85872C971FD1409F008397B1 /* AdsumConfig.xml */; };
 		85872C9F1FD140A0008397B1 /* AdsumFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85872C981FD1409F008397B1 /* AdsumFont.ttf */; };
-		85872CA01FD140A0008397B1 /* libc++.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 85872C991FD1409F008397B1 /* libc++.1.dylib */; };
-		85872CA61FD142EF008397B1 /* AdsumIOSAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85872C841FD13952008397B1 /* AdsumIOSAPI.framework */; };
-		85872CAD1FD145D2008397B1 /* libz.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 85872CAC1FD145D2008397B1 /* libz.1.tbd */; };
-		85872CAF1FD145DD008397B1 /* libc++.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 85872CAE1FD145DD008397B1 /* libc++.1.tbd */; };
 		85872CB21FD1475D008397B1 /* ObjectiveBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 85872CB01FD1475D008397B1 /* ObjectiveBridge.m */; };
 		85B4878C202984DA001285C4 /* Orange-Pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 85B4878B202984DA001285C4 /* Orange-Pin.png */; };
 		970C143E201DBE150006DE57 /* login.gif in Resources */ = {isa = PBXBuildFile; fileRef = 970C143D201DBE150006DE57 /* login.gif */; };
@@ -35,13 +34,38 @@
 		9F5584719836633C61B8C63B /* Pods_astro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7561EC8067D960F2A7E024 /* Pods_astro.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		33127BDB2021D52F0053CB72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33127BD72021D52F0053CB72 /* AdsumCoreNativeAPI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4497E7519FF8D080098F353;
+			remoteInfo = AdsumIOSAPI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		33847305202DAEC40025195B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				33847304202DAEC40025195B /* AdsumIOSAPI.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		33127BD72021D52F0053CB72 /* AdsumCoreNativeAPI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AdsumCoreNativeAPI.xcodeproj; path = "../sdk/adsum-ios-fullstack/AdsumCoreNativeAPI.xcodeproj"; sourceTree = "<group>"; };
+		33847301202DAEC30025195B /* AdsumIOSAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdsumIOSAPI.framework; sourceTree = "<group>"; };
 		3B7561EC8067D960F2A7E024 /* Pods_astro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_astro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		851E4A98202414B700C1AFAC /* marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marker.png; sourceTree = "<group>"; };
 		851E4A99202414B800C1AFAC /* path.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = path.png; sourceTree = "<group>"; };
 		856C9F49201F790200645E14 /* MapTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTestViewController.swift; sourceTree = "<group>"; };
 		856C9F4B201F7B6D00645E14 /* MapTestHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTestHomeViewController.swift; sourceTree = "<group>"; };
-		85872C841FD13952008397B1 /* AdsumIOSAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdsumIOSAPI.framework; sourceTree = "<group>"; };
 		85872C861FD13969008397B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		85872C881FD13982008397B1 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		85872C8A1FD13998008397B1 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
@@ -75,17 +99,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33847306202DAF200025195B /* libz.1.dylib in Frameworks */,
+				33847307202DAF200025195B /* libc++.1.dylib in Frameworks */,
+				33847303202DAEC40025195B /* AdsumIOSAPI.framework in Frameworks */,
+				85872C871FD13979008397B1 /* Foundation.framework in Frameworks */,
 				85872C911FD139C6008397B1 /* ImageIO.framework in Frameworks */,
-				85872CA61FD142EF008397B1 /* AdsumIOSAPI.framework in Frameworks */,
 				85872C8F1FD139B8008397B1 /* UIKit.framework in Frameworks */,
 				85872C8D1FD139AA008397B1 /* MobileCoreServices.framework in Frameworks */,
 				85872C8B1FD1399E008397B1 /* Accelerate.framework in Frameworks */,
 				85872C891FD1398B008397B1 /* CoreFoundation.framework in Frameworks */,
-				85872CAD1FD145D2008397B1 /* libz.1.tbd in Frameworks */,
-				85872C871FD13979008397B1 /* Foundation.framework in Frameworks */,
-				85872CA01FD140A0008397B1 /* libc++.1.dylib in Frameworks */,
-				85872CAF1FD145DD008397B1 /* libc++.1.tbd in Frameworks */,
-				85872C9B1FD140A0008397B1 /* libz.1.dylib in Frameworks */,
 				9F5584719836633C61B8C63B /* Pods_astro.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,6 +115,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33127BD82021D52F0053CB72 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				33127BDC2021D52F0053CB72 /* AdsumIOSAPI.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		970C143C201DBE060006DE57 /* gifs */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +134,7 @@
 		97232C081FD002C100872991 = {
 			isa = PBXGroup;
 			children = (
+				33847301202DAEC30025195B /* AdsumIOSAPI.framework */,
 				85B4878B202984DA001285C4 /* Orange-Pin.png */,
 				851E4A98202414B700C1AFAC /* marker.png */,
 				851E4A99202414B800C1AFAC /* path.png */,
@@ -113,7 +144,6 @@
 				85872C981FD1409F008397B1 /* AdsumFont.ttf */,
 				85872C991FD1409F008397B1 /* libc++.1.dylib */,
 				85872C941FD1409E008397B1 /* libz.1.dylib */,
-				85872C841FD13952008397B1 /* AdsumIOSAPI.framework */,
 				97232C131FD002C200872991 /* astro */,
 				97232C121FD002C200872991 /* Products */,
 				B347B6817D65592534BF690E /* Pods */,
@@ -184,6 +214,7 @@
 				97232C0F1FD002C200872991 /* Resources */,
 				3C60E25C8D8C6517A0319138 /* [CP] Embed Pods Frameworks */,
 				7FB106143723D522776A536C /* [CP] Copy Pods Resources */,
+				33847305202DAEC40025195B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -221,12 +252,28 @@
 			mainGroup = 97232C081FD002C100872991;
 			productRefGroup = 97232C121FD002C200872991 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 33127BD82021D52F0053CB72 /* Products */;
+					ProjectRef = 33127BD72021D52F0053CB72 /* AdsumCoreNativeAPI.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				97232C101FD002C200872991 /* astro */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		33127BDC2021D52F0053CB72 /* AdsumIOSAPI.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AdsumIOSAPI.framework;
+			remoteRef = 33127BDB2021D52F0053CB72 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		97232C0F1FD002C200872991 /* Resources */ = {
@@ -449,7 +496,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K2ERF9J63R;
+				DEVELOPMENT_TEAM = 77JYQA5UM3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -464,7 +511,7 @@
 				INFOPLIST_FILE = astro/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = sg.fooyo.astrojll;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adactive.astrojll;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BasicDemoSwift-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
@@ -478,7 +525,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K2ERF9J63R;
+				DEVELOPMENT_TEAM = 77JYQA5UM3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -491,7 +538,7 @@
 				INFOPLIST_FILE = astro/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = sg.fooyo.astrojll;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adactive.astrojll;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BasicDemoSwift-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
