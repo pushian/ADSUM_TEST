@@ -21,7 +21,17 @@ class MapTestViewController: UIViewController {
         // if withExData = false
         // sdk does not download supplementary data
         // mobile adsum maps does not need supplementary data to function.
+//        if self.adSumMapViewController.isMapDataAvailable() {
+//            //if yes, start the map loading directly
+//            debugPrint("yes, it is available")
+//            self.adSumMapViewController.start()
+//        } else {
+//            //if no, download the map data first
+////            self.adSumMapViewController.update()
+//        self.adSumMapViewController.forceUpdate(withExData: refreshData);
+//        }
         self.adSumMapViewController.forceUpdate(withExData: refreshData);
+
         self.adSumMapViewController.delegate = self
         self.adSumMapViewController.view.backgroundColor = .white
         self.view.backgroundColor = .white
@@ -46,9 +56,22 @@ class MapTestViewController: UIViewController {
         self.adSumMapViewController.pauseRenderer();
     }
     
+    func getlogos() {
+        for each in self.adSumMapViewController.getPOIs() {
+            if let id = each as? Int {
+                //                let logos = self.adSumMapViewController.getADSLogo(fromPoi: id)
+                let logoArray:NSArray = self.adSumMapViewController.getADSLogo(fromPoi: id) as! NSArray;
+                debugPrint("=========")
+                debugPrint(id)
+                debugPrint(logoArray)
+            }
+        }
+    }
+    
     @objc func Modehandler() {
         //        removeIcons()
-        //        return
+        getlogos()
+                return
         
         if is3D {
             is3D = false
@@ -63,6 +86,34 @@ class MapTestViewController: UIViewController {
             self.adSumMapViewController.setCameraMode(ObjectiveBridge().get_CameraMode_FULL())
             
         }
+    }
+    
+    func reloadIcons() {
+        //                return
+        for each in self.adSumMapViewController.getPOIs() {
+            if let id = each as? Int {
+                var path = ""
+                if let resourcePath = Bundle.main.resourcePath {
+                    let imgName = "Orange-Pin.png"
+                    path = resourcePath + "/" + imgName
+                }
+                let logo = ADSLogo(pathToImage: path)
+                logo?.setSize(70, height: 140)
+                logo?.setAlwaysOnTop(true)
+                logo?.setKeepAspectRatio(true)
+                logo?.setAutoScale(true)
+                self.adSumMapViewController.add(logo, toPoi: id)
+                
+            }
+        }
+        return
+    }
+    
+    func drawPath(id: Int) {
+        let path = self.adSumMapViewController.getPathObject()
+        path?.setMotion(false)
+        self.adSumMapViewController.setCurrentPosition(103.788627, lat: 1.299806, floor: 2)
+        self.adSumMapViewController.drawPath(toPoi: id)
     }
 }
 
@@ -85,15 +136,26 @@ extension MapTestViewController: ADSumMapViewControllerDelegate {
     
     func onPOIClicked(_ poiIds: [Any]!, placeId: Int, adSumViewController: Any!) {
         
-        let poiId = poiIds[0]
-        var logoArray:NSArray = self.adSumMapViewController.getADSLogo(fromPoi: poiId as! Int) as! NSArray;
-        for logo in logoArray{
-            let message = "Logo: \(logo as! ADSLogo)";
-            let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:  { (action) -> Void in
-            }))
-            self.present(alert, animated: true);
+//        let poiId = poiIds[0]
+//        var logoArray:NSArray = self.adSumMapViewController.getADSLogo(fromPoi: poiId as! Int) as! NSArray;
+//        for logo in logoArray{
+//            let message = "Logo: \(logo as! ADSLogo)";
+//            let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+//            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:  { (action) -> Void in
+//            }))
+//            self.present(alert, animated: true);
+//        }
+        if let poiId = poiIds[0] as? Int {
+            
+            
+            var logoArray:NSArray = self.adSumMapViewController.getADSLogo(fromPoi: poiId) as! NSArray;
+            
+            var logo = logoArray[0] as! ADSLogo;
+            print("Logo Path: \(logo.getImagePath())")
+            
+            drawPath(id: poiId)
         }
+        
     }
     
     func dataDidFinishUpdating(_ adSumViewController: Any!) {
@@ -108,6 +170,16 @@ extension MapTestViewController: ADSumMapViewControllerDelegate {
         debugPrint("mapDidFinishLoading")
         self.adSumMapViewController.setCameraMode(ObjectiveBridge().get_CameraMode_FULL());
         self.adSumMapViewController.setCurrentFloor(2);
+        if let logos = self.adSumMapViewController.getAllADSLogo() as? [ADSLogo] {
+            for each in logos {
+                //                each.poi
+                //                self.adSumMapViewController.removefrom
+                //                each.id
+                self.adSumMapViewController.remove(each)
+            }
+        }
+        
+        reloadIcons()
     }
 
 }
